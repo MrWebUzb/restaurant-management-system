@@ -1,4 +1,0 @@
-1|Asliddin|Abdivasiyev|Aziz o'g'li|administrator
-2|Asadbek|Abdivasiyev|Aziz o'g'li|ish boshqaruvchi
-3|Xolmurod|Abdivasiyev|Aziz o'g'li|direktor o'rinbosari
-4|Aziz|Raufov|Abdivasi o'g'li|direktor

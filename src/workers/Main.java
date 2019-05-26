@@ -16,9 +16,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/workers/views/main.fxml"));
         primaryStage.setTitle("Restaurant Management System");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 1028, 517));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

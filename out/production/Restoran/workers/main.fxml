@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -7,20 +8,26 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workers.MainController">
+<AnchorPane prefHeight="517.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workers.controllers.MainController">
    <children>
-      <TableView prefHeight="400.0" prefWidth="433.0">
+      <TableView fx:id="workersTable" prefHeight="517.0" prefWidth="802.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="Ism" />
-            <TableColumn prefWidth="75.0" text="Familiya" />
-            <TableColumn prefWidth="75.0" text="Sharif" />
-            <TableColumn prefWidth="75.0" text="Lavozim" />
+          <TableColumn fx:id="workerId" prefWidth="49.0" text="ID" />
+          <TableColumn fx:id="workerFirstName" prefWidth="158.0" text="Ism" />
+            <TableColumn fx:id="workerMiddleName" prefWidth="123.0" text="Familiya" />
+            <TableColumn fx:id="workerLastName" prefWidth="135.0" text="Sharif" />
+            <TableColumn fx:id="workerLavozim" prefWidth="96.0" text="Lavozim" />
+            <TableColumn fx:id="workerCreated" editable="false" prefWidth="166.0" sortType="DESCENDING" text="Ishga olingan vaqt" />
         </columns>
       </TableView>
-      <TextField layoutX="437.0" layoutY="40.0" />
-      <Label layoutX="437.0" layoutY="14.0" prefHeight="17.0" prefWidth="117.0" text="Qidirish" />
-      <Button layoutX="554.0" layoutY="74.0" mnemonicParsing="false" text="OK" />
-      <Button fx:id="backBtn" layoutX="501.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="25.0" prefWidth="86.0" text="Ortga" />
+      <TextField fx:id="searchField" layoutX="861.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" promptText="Xizmatchi nomini kiriting" />
+      <Label layoutX="860.0" layoutY="83.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="117.0" text="Qidirish" />
+      <Button fx:id="searchBtn" layoutX="902.0" layoutY="140.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#searchWorker" text="OK" />
+      <Button fx:id="backBtn" layoutX="918.0" layoutY="478.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToMain" prefHeight="25.0" prefWidth="86.0" text="Ortga" />
+      <Button fx:id="resetBtn" layoutX="952.0" layoutY="140.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetAction" text="Tozalash" />
+      <Button fx:id="addWorker" layoutX="877.0" layoutY="436.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addWorkerAction" prefHeight="33.0" prefWidth="117.0" text="Yangi xizmatchi" />
    </children>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
 </AnchorPane>

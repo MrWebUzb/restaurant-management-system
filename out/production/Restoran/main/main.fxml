@@ -34,6 +34,6 @@
       <Button fx:id="workersBtn" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" onAction="#openWorkersWindow" prefHeight="43.0" prefWidth="128.0" text="Xizmatchilar" />
       <Button layoutX="158.0" layoutY="350.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="128.0" text="Menyu" />
       <Button layoutX="300.0" layoutY="350.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="128.0" text="Buyurtmalar" />
-      <Button layoutX="484.0" layoutY="350.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Chiqish" />
+      <Button fx:id="exitBtn" layoutX="484.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#exitWindow" prefHeight="43.0" prefWidth="116.0" text="Chiqish" />
    </children>
 </AnchorPane>

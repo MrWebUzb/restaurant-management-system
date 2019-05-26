@@ -11,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,14 +29,22 @@ public class MainController {
     @FXML // fx:id="workersBtn"
     private Button workersBtn; // Value injected by FXMLLoader
 
+    @FXML // fx:id="exitBtn"
+    private Button exitBtn; // Value injected by FXMLLoader
+
+    @FXML
+    void exitWindow(MouseEvent event) {
+        System.exit(0);
+    }
+    
     @FXML
     void openWorkersWindow(ActionEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("/workers/main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/workers/views/main.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Restaurant Management System");
-            stage.setScene(new Scene(root, 600, 400));
+            stage.setScene(new Scene(root, 1028, 517));
             stage.setResizable(false);
             stage.show();
             // Hide this current window (if this is what you want)

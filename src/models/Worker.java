@@ -1,18 +1,22 @@
 package models;
 
 public class Worker {
+    public static int workersCurrId = 0;
     private int id;
     private String firstName;
     private String middleName;
     private String lastName;
     private String lavozim;
+    private String createdTime;
 
-    public Worker(int id, String firstName, String middleName, String lastName,  String lavozim) {
+    public Worker(int id, String firstName, String middleName, String lastName,  String lavozim, String created_at) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.lavozim = lavozim;
+        this.createdTime = created_at;
+        workersCurrId++;
     }
 
     public int getId() {
@@ -29,6 +33,22 @@ public class Worker {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getMiddleName() {
@@ -55,6 +75,7 @@ public class Worker {
                 ", middleName='" + middleName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", lavozim='" + lavozim + '\'' +
+                ", created_at='" + createdTime + '\'' +
                 '}';
     }
 }

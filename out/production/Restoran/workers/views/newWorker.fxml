@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workers.controllers.NewWorkerController">
+   <children>
+      <Label layoutX="29.0" layoutY="35.0" prefHeight="27.0" prefWidth="24.0" text="ID">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workerId" editable="false" layoutX="194.0" layoutY="29.0" text="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="28.0" layoutY="84.0" prefHeight="27.0" prefWidth="44.0" text="Ismi">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workerName" layoutX="194.0" layoutY="78.0" promptText="Ismi">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="27.0" layoutY="130.0" prefHeight="27.0" prefWidth="113.0" text="Familiyasi">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workerLastName" layoutX="194.0" layoutY="124.0" promptText="Familiyasi">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="26.0" layoutY="177.0" prefHeight="27.0" prefWidth="87.0" text="Sharifi">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workerMiddleName" layoutX="194.0" layoutY="171.0" promptText="Sharifi">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="saveBtn" layoutX="386.0" layoutY="338.0" mnemonicParsing="false" onAction="#addNewWorker" prefHeight="39.0" prefWidth="87.0" text="Saqlash">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="496.0" layoutY="338.0" mnemonicParsing="false" onAction="#toBack" prefHeight="39.0" prefWidth="87.0" text="Ortga">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="194.0" layoutY="277.0" prefHeight="39.0" prefWidth="224.0" text="Xatolik" textFill="#ff0808">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Label layoutX="29.0" layoutY="236.0" prefHeight="27.0" prefWidth="87.0" text="Lavozimi">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workerLavozim" layoutX="197.0" layoutY="230.0" promptText="Lavozimi">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
